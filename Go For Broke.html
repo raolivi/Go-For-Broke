@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        
+        <h2>Go For Broke Stock Program</h2>
+
+        <label>Enter Shares to buy</label><br>
+        <input type="text" id="myText"><br>
+
+        <button onclick="myFunction()">Invest!</button>
+
+        <p id="calculations"></p>
+
+        <script>
+            function myFunction(){
+                var shares = document.getElementById("myText").value; 
+                var price1 = 32.87;
+                var total1 = price1 * shares;
+                var stockbroker1 = total1 * 0.02;  
+
+                var total2 = shares * 33.92;
+                var stockbroker2 = total2 * 0.02;
+
+                var total3 = total2 - total1;
+                var final = total3 - stockbroker2;  
+
+                let answer1 = "Amount shares bought for: $" + total1;
+                let answer2 = "Amount paid to stockbroker: $" + stockbroker1;
+                let answer3 = "Amount stock sold for: $" + total2;
+                let answer4 = "Amount paid to stockbroker: $" + stockbroker2;
+                let answer5 = "Profit/Loss before paying stockbroker: $" + total3;
+                let answer6 = "Profit/Loss after paying stockbroker: $" + final;
+
+                document.getElementById("calculations").innerHTML = answer1 + "<br>" + answer2 + "<br>" + "<br>" + answer3 + "<br>" + answer4 + "<br>" + "<br>" + answer5 + "<br>" + answer6;
+
+            }
+        </script>
+    </body>
+</html>
